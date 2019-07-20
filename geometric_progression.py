@@ -2,7 +2,7 @@ from math import log
 print("This is a geometric progression program")
 
 user_choice = input(
-    "a) Find the value of a given nth term \nb) Find the term of a given value \nc) Find the first term and common ratio with other given values \nd) Find the sum of a geometric series")
+    "a) Find the value of a given nth term \nb) Find the term of a given value \nc) Find the first term and common ratio with other given values \nd) Find the sum of a geometric series \ne) Find the sum to infinity of a geometric series")
 
 if user_choice == "a":
     first_term, second_term = input(
@@ -49,3 +49,14 @@ if user_choice == "d":
     elif comman_ratio > 1:
         sumation = (first_term * ((comman_ratio ** number_of_terms)-1)) / (comman_ratio-1)
     print(sumation)
+
+if user_choice == "e":
+    first_term, second_term = input("Enter the first and second terms, separated by commas: ").split(",")
+    first_term, second_term = int(first_term), int(second_term)
+    comman_ratio = second_term / first_term
+    if comman_ratio > 1:
+        print("The sum of infinity series does not exist")
+    elif comman_ratio < 1 and comman_ratio > -1:
+        for n in range(100):
+            sum_to_infinity = first_term / (1-comman_ratio)
+    print(int(sum_to_infinity))

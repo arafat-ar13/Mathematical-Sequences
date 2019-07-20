@@ -2,7 +2,7 @@ from math import log
 print("This is a geometric progression program")
 
 user_choice = input(
-    "a) Find the value of a given nth term \nb) Find the term of a given value \nc) Find the first term and common ratio with other given values ")
+    "a) Find the value of a given nth term \nb) Find the term of a given value \nc) Find the first term and common ratio with other given values \nd) Find the sum of a geometric series")
 
 if user_choice == "a":
     first_term, second_term = input(
@@ -14,8 +14,7 @@ if user_choice == "a":
     print(value_of_nth_term)
 
 if user_choice == "b":
-    first_term, second_term = input(
-        "Enter the first and second terms, separated by commas: ").split(",")
+    first_term, second_term = input("Enter the first and second terms, separated by commas: ").split(",")
     first_term, second_term = int(first_term), int(second_term)
     comman_ratio = second_term / first_term
     user_term_value = int(input("Enter the value of the term you want: "))
@@ -39,3 +38,14 @@ if user_choice == "c":
 
     print("First term:" + str(a))
     print("Ratio:" + str(r))
+
+if user_choice == "d":
+    first_term, second_term = input("Enter the first and second terms, separated by commas: ").split(",")
+    first_term, second_term = int(first_term), int(second_term)
+    comman_ratio = second_term / first_term
+    number_of_terms = int(input("How many terms in this series?: "))
+    if comman_ratio < 1:
+        sumation = (first_term * (1-(comman_ratio ** number_of_terms))) / (comman_ratio-1)
+    elif comman_ratio > 1:
+        sumation = (first_term * ((comman_ratio ** number_of_terms)-1)) / (comman_ratio-1)
+    print(sumation)

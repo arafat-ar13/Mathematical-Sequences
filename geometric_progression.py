@@ -1,4 +1,5 @@
 from math import log
+from time import sleep
 print("This is a geometric progression program")
 
 user_choice = input(

@@ -1,20 +1,11 @@
 from math import log
 from time import sleep
+from float_to_int import float_to_int_converter
 print("This is a geometric progression program")
 
 sleep(1)
 user_choice = input(
     "a) Find the value of a given nth term \nb) Find the term of a given value \nc) Find the first term and common ratio with other given values \nd) Find the sum of a geometric series \ne) Find the sum to infinity of a geometric series \n")
-
-
-def float_to_int_converter(float_number):
-    if type(float_number) == float:
-        if str(float_number)[-1] == "0":
-            return int(float_number)
-        else:
-            return float_number
-    else:
-        return "The number given is not a float"
 
 
 def find_value(first_term, second_term, common_ratio):

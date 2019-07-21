@@ -1,3 +1,4 @@
+from float_to_int import float_to_int_converter
 print("This program simulates an arithmetic progression")
 
 user_choice = input("a) Find the value of a given term \nb) Find the term of a given value \n" )
@@ -10,7 +11,8 @@ def find_value(first_term, second_term, common_difference):
 def find_term(first_term, second_term, common_difference):
     user_value_of_nth_term = int(input("Enter the value of the term you are looking for: "))
     term_of_value = ((user_value_of_nth_term + common_difference)-first_term) / common_difference
-    print(f"The value {user_value_of_nth_term} belongs to the term {term_of_value} for this series")
+    answer = float_to_int_converter(term_of_value)
+    print(f"The value {user_value_of_nth_term} belongs to the term {answer} for this series")
 
 first_term, second_term = input("Enter the first and second term, separated by commas ").split(",")
 first_term, second_term = int(first_term), int(second_term)

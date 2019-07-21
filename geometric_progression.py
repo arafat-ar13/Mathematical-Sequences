@@ -2,6 +2,7 @@ from math import log
 from time import sleep
 print("This is a geometric progression program")
 
+sleep(1)
 user_choice = input(
     "a) Find the value of a given nth term \nb) Find the term of a given value \nc) Find the first term and common ratio with other given values \nd) Find the sum of a geometric series \ne) Find the sum to infinity of a geometric series \n")
 
@@ -65,18 +66,23 @@ def find_sum_to_infinity(first_term, second_term, common_ratio):
     answer = float_to_int_converter(sum_to_infinity)
     print(answer)
 
-
+sleep(1)
 first_term, second_term = input("Enter the first and second terms, separated by commas: ").split(",")
 first_term, second_term = int(first_term), int(second_term)
 common_ratio = second_term / first_term
 
 if user_choice == "a":
+    sleep(1)
     find_value(first_term, second_term, common_ratio)
 elif user_choice == "b":
+    sleep(1)
     find_term(first_term, second_term, common_ratio)
 elif user_choice == "c":
+    sleep(1)
     find_first_term_and_ratio()
 elif user_choice == "d":
+    sleep(1)
     find_sum(first_term, second_term, common_ratio)
 elif user_choice == "e":
+    sleep(1)
     find_sum_to_infinity(first_term, second_term, common_ratio)

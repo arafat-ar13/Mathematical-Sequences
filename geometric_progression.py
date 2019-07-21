@@ -67,9 +67,10 @@ def find_sum_to_infinity(first_term, second_term, common_ratio):
     print(answer)
 
 sleep(1)
-first_term, second_term = input("Enter the first and second terms, separated by commas: ").split(",")
-first_term, second_term = int(first_term), int(second_term)
-common_ratio = second_term / first_term
+if user_choice != "c":
+    first_term, second_term = input("Enter the first and second terms, separated by commas: ").split(",")
+    first_term, second_term = int(first_term), int(second_term)
+    common_ratio = second_term / first_term
 
 if user_choice == "a":
     sleep(1)

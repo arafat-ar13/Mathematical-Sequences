@@ -42,8 +42,7 @@ def first_term_and_difference():
     solution = solve(system, [a, d])
     print(f"Here, the first term is {solution[a]} and common difference is {solution[d]}")
 
-
-
+    
 sleep(0.75)
 if user_choice != "d":
     first_term, second_term = input("Enter the first and second term, separated by commas ").split(",")

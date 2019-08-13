@@ -6,3 +6,6 @@ def float_to_int_converter(float_number):
             return float_number
     else:
         return "The number given is not a float"
+
+floating_num = float(input("enter number: "))
+print(float_to_int_converter(floating_num))
